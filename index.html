@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צלילים ברוח | לבנת לוי אופיר - טיפול במוזיקה</title>
+  
+  <!-- גופנים מתאימים בעברית -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&family=Varela+Round&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-cream: #FAF7F0;
+      --bg-card: #FFFFFF;
+      --gold-border: #D4AF37;
+      --gold-light: #E8D595;
+      --purple-primary: #6E3B87;
+      --purple-dark: #4A235A;
+      --text-main: #2C2C2C;
+      --text-muted: #555555;
+      --whatsapp-green: #25D366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Assistant', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px 12px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: var(--bg-card);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 4px;
+      padding: 40px 24px 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      position: relative;
+      text-align: center;
+    }
+
+    /* כותרת מותג עליונה */
+    .brand-header {
+      margin-bottom: 24px;
+    }
+
+    .brand-sub {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 1.35rem;
+      color: var(--purple-primary);
+      margin-bottom: 2px;
+    }
+
+    .brand-title {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--purple-primary);
+      line-height: 1.2;
+    }
+
+    .brand-author {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 1.6rem;
+      color: var(--purple-primary);
+      margin-top: 4px;
+    }
+
+    /* אלמנט מפריד מעוצב */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      color: var(--gold-border);
+      font-size: 1.2rem;
+      letter-spacing: 4px;
+    }
+
+    .ornament::before, .ornament::after {
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: var(--gold-light);
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    /* פרטי המטפלת וההסמכה */
+    .credentials {
+      margin-bottom: 24px;
+    }
+
+    .therapist-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .credentials p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    /* כותרת השירות הייעודי */
+    .service-highlight {
+      margin: 24px 0 16px;
+    }
+
+    .service-badge {
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--purple-primary);
+      margin-bottom: 4px;
+    }
+
+    .service-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--purple-primary);
+    }
+
+    .service-audience {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--purple-primary);
+      margin-top: 2px;
+    }
+
+    /* רשימת היתרונות */
+    .features-list {
+      list-style: none;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .features-list li {
+      font-size: 1.05rem;
+      color: var(--purple-primary);
+      font-weight: 600;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .features-list li::before {
+      content: "•";
+      color: var(--purple-primary);
+      font-weight: bold;
+      margin-left: 6px;
+    }
+
+    /* תנאי התשלום */
+    .payment-info {
+      font-size: 0.95rem;
+      color: var(--purple-primary);
+      margin: 24px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* כפתורי הנעה לפעולה (CTA) */
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp-green);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #20BA56;
+      transform: translateY(-2px);
+    }
+
+    .btn-phone {
+      background-color: var(--purple-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(110, 59, 135, 0.3);
+    }
+
+    .btn-phone:hover {
+      background-color: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    /* התאמות למובייל */
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 16px 24px;
+      }
+      .brand-title {
+        font-size: 2.1rem;
+      }
+      .brand-sub, .brand-author {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    
+    <!-- כותרת ראשית -->
+    <header class="brand-header">
+      <div class="brand-sub">סטודיו למוזיקה</div>
+      <h1 class="brand-title">צלילים ברוח</h1>
+      <div class="brand-author">לבנת לוי</div>
+    </header>
+
+    <div class="ornament">𝄢 𝄞</div>
+
+    <!-- פירוט מקצועי -->
+    <section class="credentials">
+      <div class="therapist-name">לבנת לוי אופיר,</div>
+      <p>מטפלת רגשית מוסמכת בטיפול באמצעות אומנויות.</p>
+      <p>תואר שני M.A.A.T בטיפול במוזיקה.</p>
+      <p>מורה מנוסה למוזיקה במשרד החינוך.</p>
+      <p>בוגרת האקדמיה למוזיקה ולמחול.</p>
+      <p>תואר B.Ed.Mus בחינוך מוזיקלי.</p>
+    </section>
+
+    <div class="ornament">𝄢 𝄞</div>
+
+    <!-- תוכן הטיפול והשירות -->
+    <section class="service-highlight">
+      <div class="service-badge">"בצוותא"</div>
+      <div class="service-title">מפגש מוזיקלי בשניים</div>
+      <div class="service-audience">לבני הגיל השלישי ולאנשים המתמודדים עם דמנציה ואלצהיימר</div>
+    </section>
+
+    <ul class="features-list">
+      <li>הכרות אישית עם עולמו הפנימי והמוזיקלי של המטופל.</li>
+      <li>סטודיו עד הבית – הגעה עם מגוון רב של כלי נגינה מיוחדים מעולם התרפיה במוזיקה. המפגש מתקיים בבית המטופל.</li>
+      <li>משך המפגש 45 דקות.</li>
+    </ul>
+
+    <div class="payment-info">
+      התשלום יהיה בתום המפגש בכרטיס אשראי או בביט<br>
+      ע״י קישור שאשלח לאחד מבני המשפחה.
+    </div>
+
+    <!-- כפתורי הנעה לפעולה ישירים -->
+    <div class="cta-container">
+      <a href="https://wa.me/972545684710?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9C%D7%91%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9B%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%9E%D7%A4%D7%92%D7%A9%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%D7%90" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <span>הודעת וואטסאפ לתיאום ופרטים</span>
+      </a>
+      
+      <a href="tel:0545684710" class="btn btn-phone">
+        <span>חיוג ישיר: 054-5684710</span>
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>
