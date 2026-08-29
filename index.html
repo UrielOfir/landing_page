@@ -1,300 +1,317 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>צלילים ברוח | לבנת לוי אופיר - טיפול במוזיקה</title>
-  
-  <!-- גופנים בעברית -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg-cream: #FAF7F0;
-      --bg-card: #FFFFFF;
-      --gold-border: #D4AF37;
-      --gold-light: #E8D595;
-      --purple-primary: #6E3B87;
-      --purple-dark: #4A235A;
-      --text-main: #2C2C2C;
-      --text-muted: #555555;
-      --whatsapp-green: #25D366;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צלילים ברוח | לבנת לוי אופיר - טיפול במוזיקה</title>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <!-- גופנים בעברית -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap"
+        rel="stylesheet">
 
-    body {
-      font-family: 'Assistant', sans-serif;
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 24px 12px;
-    }
+    <style>
+        :root {
+            --bg-cream: #FAF7F0;
+            --bg-card: #FFFFFF;
+            --gold-border: #D4AF37;
+            --gold-light: #E8D595;
+            --purple-primary: #6E3B87;
+            --purple-dark: #4A235A;
+            --text-main: #2C2C2C;
+            --text-muted: #555555;
+            --whatsapp-green: #25D366;
+        }
 
-    .container {
-      max-width: 580px;
-      width: 100%;
-      background: var(--bg-card);
-      border: 1.5px solid var(--gold-border);
-      border-radius: 6px;
-      padding: 36px 24px 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      position: relative;
-      text-align: center;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* תמונת פרופיל בראש הדף */
-    .profile-section {
-      margin-bottom: 16px;
-    }
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px 12px;
+        }
 
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;
-      border: 3px solid var(--gold-border);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-    }
+        .container {
+            max-width: 580px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1.5px solid var(--gold-border);
+            border-radius: 6px;
+            padding: 36px 24px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            text-align: center;
+        }
 
-    /* לוגו */
-    .brand-header {
-      margin-bottom: 16px;
-    }
+        /* תמונת פרופיל בראש הדף */
+        .profile-section {
+            margin-bottom: 16px;
+        }
 
-    .logo-img {
-      max-width: 260px;
-      width: 100%;
-      height: auto;
-      display: inline-block;
-    }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid var(--gold-border);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
 
-    /* אלמנט מפריד מעוצב */
-    .ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 18px auto;
-      color: var(--gold-border);
-      font-size: 1.2rem;
-      letter-spacing: 4px;
-    }
+        /* לוגו */
+        .brand-header {
+            margin-bottom: 16px;
+        }
 
-    .ornament::before, .ornament::after {
-      content: "";
-      display: inline-block;
-      width: 45px;
-      height: 1px;
-      background-color: var(--gold-light);
-      margin: 0 10px;
-      vertical-align: middle;
-    }
+        .logo-img {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+        }
 
-    /* פרטי המטפלת וההסמכה */
-    .credentials {
-      margin-bottom: 20px;
-    }
+        /* אלמנט מפריד מעוצב */
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 18px auto;
+            color: var(--gold-border);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+        }
 
-    .therapist-name {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 6px;
-    }
+        .ornament::before,
+        .ornament::after {
+            content: "";
+            display: inline-block;
+            width: 45px;
+            height: 1px;
+            background-color: var(--gold-light);
+            margin: 0 10px;
+            vertical-align: middle;
+        }
 
-    .credentials p {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 4px;
-    }
+        /* פרטי המטפלת וההסמכה */
+        .credentials {
+            margin-bottom: 20px;
+        }
 
-    /* כותרת השירות הייעודי */
-    .service-highlight {
-      margin: 20px 0 14px;
-    }
+        .therapist-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
 
-    .service-badge {
-      font-size: 1.35rem;
-      font-weight: 700;
-      font-style: italic;
-      color: var(--purple-primary);
-      margin-bottom: 4px;
-    }
+        .credentials p {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
 
-    .service-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--purple-primary);
-    }
+        /* כותרת השירות הייעודי */
+        .service-highlight {
+            margin: 20px 0 14px;
+        }
 
-    .service-audience {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--purple-primary);
-      margin-top: 2px;
-    }
+        .service-badge {
+            font-size: 1.35rem;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--purple-primary);
+            margin-bottom: 4px;
+        }
 
-    /* רשימת היתרונות */
-    .features-list {
-      list-style: none;
-      margin: 18px 0;
-      text-align: center;
-    }
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--purple-primary);
+        }
 
-    .features-list li {
-      font-size: 1.05rem;
-      color: var(--purple-primary);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+        .service-audience {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--purple-primary);
+            margin-top: 2px;
+        }
 
-    .features-list li::before {
-      content: "• ";
-      color: var(--purple-primary);
-      font-weight: bold;
-    }
+        /* רשימת היתרונות */
+        .features-list {
+            list-style: none;
+            margin: 18px 0;
+            text-align: center;
+        }
 
-    /* תנאי התשלום */
-    .payment-info {
-      font-size: 0.95rem;
-      color: var(--purple-primary);
-      margin: 20px 0 16px;
-      line-height: 1.5;
-    }
+        .features-list li {
+            font-size: 1.05rem;
+            color: var(--purple-primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-    /* כפתורי הנעה לפעולה */
-    .cta-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 22px;
-    }
+        .features-list li::before {
+            content: "• ";
+            color: var(--purple-primary);
+            font-weight: bold;
+        }
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 20px;
-      border-radius: 30px;
-      font-size: 1.08rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
+        /* תנאי התשלום */
+        .payment-info {
+            font-size: 0.95rem;
+            color: var(--purple-primary);
+            margin: 20px 0 16px;
+            line-height: 1.5;
+        }
 
-    .btn-whatsapp {
-      background-color: var(--whatsapp-green);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-    }
+        /* כפתורי הנעה לפעולה */
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 22px;
+        }
 
-    .btn-whatsapp:hover {
-      background-color: #20BA56;
-      transform: translateY(-2px);
-    }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 30px;
+            font-size: 1.08rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
 
-    .btn-phone {
-      background-color: var(--purple-primary);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(110, 59, 135, 0.3);
-    }
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+        }
 
-    .btn-phone:hover {
-      background-color: var(--purple-dark);
-      transform: translateY(-2px);
-    }
+        .btn-whatsapp:hover {
+            background-color: #20BA56;
+            transform: translateY(-2px);
+        }
 
-    /* התאמות למסכים קטנים */
-    @media (max-width: 480px) {
-      .container {
-        padding: 26px 14px 20px;
-      }
-      .profile-img {
-        width: 120px;
-        height: 120px;
-      }
-      .logo-img {
-        max-width: 220px;
-      }
-      .btn {
-        font-size: 1rem;
-        padding: 12px 16px;
-      }
-    }
-  </style>
+        .btn-phone {
+            background-color: var(--purple-primary);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(110, 59, 135, 0.3);
+        }
+
+        .btn-phone:hover {
+            background-color: var(--purple-dark);
+            transform: translateY(-2px);
+        }
+
+        /* התאמות למסכים קטנים */
+        @media (max-width: 480px) {
+            .container {
+                padding: 26px 14px 20px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .logo-img {
+                max-width: 220px;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 12px 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <main class="container">
-    
-    <!-- תמונת פרופיל -->
-    <div class="profile-section">
-      <img src="profile_pic.jpeg" alt="לבנת לוי אופיר" class="profile-img">
-    </div>
+    <main class="container">
 
-    <!-- לוגו -->
-    <header class="brand-header">
-      <img src="logo.png" alt="צלילים ברוח - סטודיו למוזיקה לבנת לוי" class="logo-img">
-    </header>
+        <!-- תמונת פרופיל -->
+        <div class="profile-section">
+            <img src="profile_pic.jpeg" alt="לבנת לוי אופיר" class="profile-img">
+        </div>
 
-    <div class="ornament">𝄢 𝄞</div>
+        <!-- לוגו -->
+        <header class="brand-header">
+            <img src="logo.png" alt="צלילים ברוח - סטודיו למוזיקה לבנת לוי" class="logo-img">
+        </header>
 
-    <!-- פירוט מקצועי -->
-    <section class="credentials">
-      <div class="therapist-name">לבנת לוי אופיר,</div>
-      <p>מטפלת רגשית מוסמכת בטיפול באמצעות אומנויות.</p>
-      <p>תואר שני M.A.A.T בטיפול במוזיקה.</p>
-      <p>מורה מנוסה למוזיקה במשרד החינוך.</p>
-      <p>בוגרת האקדמיה למוזיקה ולמחול.</p>
-      <p>תואר B.Ed.Mus בחינוך מוזיקלי.</p>
-    </section>
+        <div class="ornament">𝄢 𝄞</div>
 
-    <div class="ornament">𝄢 𝄞</div>
+        <!-- פירוט מקצועי -->
+        <section class="credentials">
+            <div class="therapist-name">לבנת לוי אופיר,</div>
+            <p>מטפלת רגשית מוסמכת בטיפול באמצעות אומנויות.</p>
+            <p>תואר שני M.A.A.T בטיפול במוזיקה.</p>
+            <p>מורה מנוסה למוזיקה במשרד החינוך.</p>
+            <p>בוגרת האקדמיה למוזיקה ולמחול.</p>
+            <p>תואר B.Ed.Mus בחינוך מוזיקלי.</p>
+        </section>
 
-    <!-- תוכן הטיפול והשירות -->
-    <section class="service-highlight">
-      <div class="service-badge">"בצוותא"</div>
-      <div class="service-title">מפגש מוזיקלי בשניים</div>
-      <div class="service-audience">לבני הגיל השלישי ולאנשים המתמודדים עם דמנציה ואלצהיימר</div>
-    </section>
+        <div class="ornament">𝄢 𝄞</div>
 
-    <ul class="features-list">
-      <li>הכרות אישית עם עולמו הפנימי והמוזיקלי של המטופל.</li>
-      <li>סטודיו עד הבית – הגעה עם מגוון רב של כלי נגינה מיוחדים מעולם התרפיה במוזיקה. המפגש מתקיים בבית המטופל.</li>
-      <li>משך המפגש 45 דקות.</li>
-    </ul>
+        <!-- תוכן הטיפול והשירות -->
+        <section class="service-highlight">
+            <div class="service-badge">"בצוותא"</div>
+            <div class="service-title">מפגש מוזיקלי בשניים</div>
+            <div class="service-audience">לבני הגיל השלישי ולאנשים המתמודדים עם דמנציה ואלצהיימר</div>
+        </section>
 
-    <div class="payment-info">
-      התשלום יהיה בתום המפגש בכרטיס אשראי או בביט<br>
-      ע״י קישור שאשלח לאחד מבני המשפחה.
-    </div>
+        <ul class="features-list">
+            <li>
+                המוזיקה ככלי וגשר לעולמו הפנימי של האדם. <br>
+                בטיפול במוזיקה קורה <br>
+                מפגש מרגש שיש בו שמחה, צחוק, הנאה וחוויה מרגשת של של תחושת חיבור ושל ביחד. </li>
+            <li>
+                בכוחה של המוזיקה לווסת, להרגיע, לעורר זכרונות ולחזק את חוויית החיבור האדם לעולמו הפנימי.
+            </li>
+            <li>סטודיו עד הבית – הגעה עם מגוון רב של כלי נגינה מיוחדים מעולם התרפיה במוזיקה. המפגש מתקיים בבית המטופל.
+            </li>
+            <li>משך המפגש 45 דקות.</li>
+        </ul>
 
-    <!-- כפתורי הנעה לפעולה -->
-    <div class="cta-container">
-      <a href="https://wa.me/972545684710?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9C%D7%91%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%91%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94%20%22%D7%91%D7%A6%D7%95%D7%95%D7%AA%D7%90%22" class="btn btn-whatsapp" target="_blank" rel="noopener">
-        <span>הודעת וואטסאפ לתיאום ופרטים</span>
-      </a>
-      
-      <a href="tel:0545684710" class="btn btn-phone">
-        <span>חיוג ישיר: 054-5684710</span>
-      </a>
-    </div>
+        <div class="payment-info">
+            התשלום יהיה בתום המפגש בכרטיס אשראי או בביט<br>
+            ע״י קישור שאשלח לאחד מבני המשפחה.
+        </div>
 
-  </main>
+        <!-- כפתורי הנעה לפעולה -->
+        <div class="cta-container">
+            <a href="https://wa.me/972545684710?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9C%D7%91%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%91%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94%20%22%D7%91%D7%A6%D7%95%D7%95%D7%AA%D7%90%22"
+                class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <span>הודעת וואטסאפ לתיאום ופרטים</span>
+            </a>
+
+            <a href="tel:0545684710" class="btn btn-phone">
+                <span>חיוג ישיר: 054-5684710</span>
+            </a>
+        </div>
+
+    </main>
 
 </body>
+
 </html>
