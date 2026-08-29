@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>צלילים ברוח | לבנת לוי אופיר - טיפול במוזיקה</title>
   
-  <!-- גופנים מתאימים בעברית -->
+  <!-- גופנים בעברית -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -38,46 +38,47 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px 12px;
+      padding: 24px 12px;
     }
 
     .container {
-      max-width: 600px;
+      max-width: 580px;
       width: 100%;
       background: var(--bg-card);
       border: 1.5px solid var(--gold-border);
-      border-radius: 4px;
-      padding: 40px 24px 30px;
+      border-radius: 6px;
+      padding: 36px 24px 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       position: relative;
       text-align: center;
     }
 
-    /* כותרת מותג עליונה */
+    /* תמונת פרופיל בראש הדף */
+    .profile-section {
+      margin-bottom: 16px;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid var(--gold-border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    /* לוגו */
     .brand-header {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
-    .brand-sub {
-      font-family: 'Varela Round', sans-serif;
-      font-size: 1.35rem;
-      color: var(--purple-primary);
-      margin-bottom: 2px;
-    }
-
-    .brand-title {
-      font-family: 'Varela Round', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--purple-primary);
-      line-height: 1.2;
-    }
-
-    .brand-author {
-      font-family: 'Varela Round', sans-serif;
-      font-size: 1.6rem;
-      color: var(--purple-primary);
-      margin-top: 4px;
+    .logo-img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
     }
 
     /* אלמנט מפריד מעוצב */
@@ -85,7 +86,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 20px auto;
+      margin: 18px auto;
       color: var(--gold-border);
       font-size: 1.2rem;
       letter-spacing: 4px;
@@ -94,7 +95,7 @@
     .ornament::before, .ornament::after {
       content: "";
       display: inline-block;
-      width: 50px;
+      width: 45px;
       height: 1px;
       background-color: var(--gold-light);
       margin: 0 10px;
@@ -103,7 +104,7 @@
 
     /* פרטי המטפלת וההסמכה */
     .credentials {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .therapist-name {
@@ -122,7 +123,7 @@
 
     /* כותרת השירות הייעודי */
     .service-highlight {
-      margin: 24px 0 16px;
+      margin: 20px 0 14px;
     }
 
     .service-badge {
@@ -149,7 +150,7 @@
     /* רשימת היתרונות */
     .features-list {
       list-style: none;
-      margin: 20px 0;
+      margin: 18px 0;
       text-align: center;
     }
 
@@ -157,31 +158,29 @@
       font-size: 1.05rem;
       color: var(--purple-primary);
       font-weight: 600;
-      margin-bottom: 10px;
-      position: relative;
+      margin-bottom: 8px;
     }
 
     .features-list li::before {
-      content: "•";
+      content: "• ";
       color: var(--purple-primary);
       font-weight: bold;
-      margin-left: 6px;
     }
 
     /* תנאי התשלום */
     .payment-info {
       font-size: 0.95rem;
       color: var(--purple-primary);
-      margin: 24px 0 18px;
+      margin: 20px 0 16px;
       line-height: 1.5;
     }
 
-    /* כפתורי הנעה לפעולה (CTA) */
+    /* כפתורי הנעה לפעולה */
     .cta-container {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-top: 24px;
+      margin-top: 22px;
     }
 
     .btn {
@@ -191,7 +190,7 @@
       gap: 8px;
       padding: 14px 20px;
       border-radius: 30px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.25s ease;
@@ -219,16 +218,21 @@
       transform: translateY(-2px);
     }
 
-    /* התאמות למובייל */
+    /* התאמות למסכים קטנים */
     @media (max-width: 480px) {
       .container {
-        padding: 30px 16px 24px;
+        padding: 26px 14px 20px;
       }
-      .brand-title {
-        font-size: 2.1rem;
+      .profile-img {
+        width: 120px;
+        height: 120px;
       }
-      .brand-sub, .brand-author {
-        font-size: 1.25rem;
+      .logo-img {
+        max-width: 220px;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 12px 16px;
       }
     }
   </style>
@@ -237,14 +241,17 @@
 
   <main class="container">
     
-    <!-- כותרת ראשית -->
+    <!-- תמונת פרופיל -->
+    <div class="profile-section">
+      <img src="profile_pic.jpeg" alt="לבנת לוי אופיר" class="profile-img">
+    </div>
+
+    <!-- לוגו -->
     <header class="brand-header">
-      <div class="brand-sub">סטודיו למוזיקה</div>
-      <h1 class="brand-title">צלילים ברוח</h1>
-      <div class="brand-author">לבנת לוי</div>
+      <img src="logo.png" alt="צלילים ברוח - סטודיו למוזיקה לבנת לוי" class="logo-img">
     </header>
 
-    <div class="ornament">𝄢 𝄞</div>
+    <div class="ornament">𝄢 𝄞 𝄡</div>
 
     <!-- פירוט מקצועי -->
     <section class="credentials">
@@ -256,7 +263,7 @@
       <p>תואר B.Ed.Mus בחינוך מוזיקלי.</p>
     </section>
 
-    <div class="ornament">𝄢 𝄞</div>
+    <div class="ornament">𝄢 𝄞 𝄡</div>
 
     <!-- תוכן הטיפול והשירות -->
     <section class="service-highlight">
@@ -266,11 +273,7 @@
     </section>
 
     <ul class="features-list">
-      <li>המוזיקה ככלי וגשר לעולמו הפנימי של האדם. </li>
-      <li>בטיפול במוזיקה קורה <br>
-פגש מרגש שיש בו שמחה, צחוק, הנאה וחוויה מרגשת של של תחושת חיבור ושל ביחד. </li>
-      <li>
-בכוחה של המוזיקה לווסת, להרגיע, לעורר זכרונות ולחזק את חוויית החיבור האדם לעולמו הפנימי.</li>
+      <li>הכרות אישית עם עולמו הפנימי והמוזיקלי של המטופל.</li>
       <li>סטודיו עד הבית – הגעה עם מגוון רב של כלי נגינה מיוחדים מעולם התרפיה במוזיקה. המפגש מתקיים בבית המטופל.</li>
       <li>משך המפגש 45 דקות.</li>
     </ul>
@@ -280,9 +283,9 @@
       ע״י קישור שאשלח לאחד מבני המשפחה.
     </div>
 
-    <!-- כפתורי הנעה לפעולה ישירים -->
+    <!-- כפתורי הנעה לפעולה -->
     <div class="cta-container">
-      <a href="https://wa.me/972545684710?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9C%D7%91%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9B%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%9E%D7%A4%D7%92%D7%A9%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%D7%90" class="btn btn-whatsapp" target="_blank" rel="noopener">
+      <a href="https://wa.me/972545684710?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9C%D7%91%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%91%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94%20%22%D7%91%D7%A6%D7%95%D7%95%D7%AA%D7%90%22" class="btn btn-whatsapp" target="_blank" rel="noopener">
         <span>הודעת וואטסאפ לתיאום ופרטים</span>
       </a>
       
